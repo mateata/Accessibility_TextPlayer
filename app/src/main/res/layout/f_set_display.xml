@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+     <include
+         android:id="@+id/h_menu_title"
+            layout="@layout/h_back_title" /> 
+            
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_below="@+id/h_menu_title"        
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#ddd"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="@string/setting_text_size_title"
+            android:contentDescription="@string/setting_text_size_desc"  />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp" >
+
+            <TextView
+                style="@style/SettingText"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:text="@string/setting_text_size_kr" />
+
+            <Button
+                android:id="@+id/bt_size_down"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_fontsize"
+                android:background="@drawable/icon_min"
+                android:contentDescription="@string/common_minus" />
+
+            <TextView
+                android:id="@+id/tv_fontsize"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/bt_size_up"
+                android:gravity="center"
+                android:text="50" />
+
+            <Button
+                android:id="@+id/bt_size_up"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/icon_plu"
+                android:contentDescription="@string/common_plus" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#ddd"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="@string/set_contrast_kr"
+            android:contentDescription="@string/set_contrast_desc" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:clickable="false"
+            android:divider="@drawable/img_dot_line" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

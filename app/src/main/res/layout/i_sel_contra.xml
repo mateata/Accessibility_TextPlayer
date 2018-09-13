@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp" >
+
+    <ImageView
+        android:id="@+id/iv_sel_contra"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/tv_sel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/iv_sel_contra"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:gravity="left|center_vertical"
+        android:text="제목"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/cb_sel"
+        android:layout_width="56dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/sel_btn_check"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/tv_setfunc_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:layout_alignParentTop="true"
+        android:background="#ddd" />
+
+    <RelativeLayout
+        android:id="@+id/l_setfunc_item"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/tv_setfunc_subtitle" >
+
+        <TextView
+            android:id="@+id/tv_setfunc_name"
+            style="@style/SettingText"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="문단" />
+
+        <CheckBox
+            android:id="@+id/cb_setfunc_value"
+            style="@style/CheckBox"
+            android:layout_width="56dp"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

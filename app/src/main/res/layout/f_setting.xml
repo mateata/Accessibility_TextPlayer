@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jwlee.txtplayer.tdplayer.TDSettingMenu" >
+
+     <include
+         android:id="@+id/h_menu_title"
+            layout="@layout/h_back_title" />   
+    <ListView
+        android:id="@+id/player_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/img_dot_line"
+        android:layout_below="@+id/h_menu_title" >
+    </ListView>
+
+</RelativeLayout>

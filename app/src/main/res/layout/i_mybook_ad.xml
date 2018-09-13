@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/list_row_bg_color"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/row"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_x"
+            android:layout_alignParentLeft="true"
+            android:checked="false"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="220dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingRight="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/list_row_font_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/page"
+            android:layout_width="220dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/title"
+            android:ellipsize="end"
+            android:gravity="left|top"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/list_row_font_color"
+            android:textSize="12sp" />
+
+		<TextView
+		    android:id="@+id/btn_update"
+		    android:layout_width="60dp"
+		    android:layout_height="40dp"
+		    android:layout_centerVertical="true"
+		    android:layout_alignParentRight="true"
+		    android:gravity="center|center_vertical"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"		    
+		    android:background="@drawable/btn_link_g_se"
+		    android:text="@string/common_list_update"
+		    android:textColor="@color/color_txt_black"
+		    android:textSize="14dp" 
+		    android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

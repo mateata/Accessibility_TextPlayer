@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/item_divider"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/tv_divider"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#e7e7e7"
+        android:visibility="gone" />
+    
+    <ImageView
+        android:id="@+id/iv_folder"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp" />
+    
+    <RelativeLayout
+        android:id="@+id/l_sorting_item"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_toRightOf="@+id/iv_folder"
+        android:layout_below="@+id/tv_divider" >
+
+        <TextView
+            android:id="@+id/tv_sorting"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_header_txt">#ffffff</color>
+    <color name="color_header_bg">#20ad94</color>    
+    <color name="color_txt_white">#ffffff</color>
+    <color name="color_txt_black">#000000</color> 
+    <color name="color_txt_gray">#666666</color>     
+    
+    <!-- 탭메뉴 BG -->
+    <color name="tab_menu_nom">#575757</color>
+    <color name="tab_menu_sel">#242424</color>
+    
+	<!-- 리스트 버튼 BG -->
+    <color name="list_bg_color">#F7F7F7</color>    
+    <drawable name="list_bg_color">#F7F7F7</drawable>
+    <drawable name="list_select_bg_color">#33B5E5</drawable>
+    <!-- 리스트 버튼 글자 색상 -->
+    <color name="listview_text_color">#222222</color>
+    <color name="listview_select_text_color">#222222</color>       
+</resources>

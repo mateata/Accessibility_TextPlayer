@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">텍스트리더\n for Blind</string>
+    <string name="action_selectall">전체선택/해제</string>        
+    <string name="action_delete">선택항목 삭제</string> 
+    <string name="action_search">검색</string>        
+    <string name="action_filter">자료보기 방식</string>    
+    <string name="action_filter_all">전체</string>       
+    <string name="action_filter_text">텍스트 파일</string>
+    <string name="action_edit">편집모드/해제</string>
+    <string name="action_exit">종료</string>                 
+    <string name="action_search_cancel">검색 취소</string>    
+    <string name="action_booklist">자료목록</string>     
+    
+    <!-- 수면타이머 설정  -->   
+    <string name="set_sleep0">끔</string>
+    <string name="set_sleep1">5분</string>
+    <string name="set_sleep2">15분</string>
+    <string name="set_sleep3">30분</string>
+    <string name="set_sleep4">1시간</string>
+        
+    <!-- 통상적으로 쓰는 단어 -->
+    <string name="common_ok">확인</string>
+    <string name="common_cancel">취소</string>       
+    <string name="common_yes">예</string>
+    <string name="common_no">아니오</string>
+    <string name="common_back">이전</string>
+    <string name="common_next">다음</string>
+    <string name="common_page">페이지</string>
+    <string name="common_page_move">페이지 이동</string>
+    <string name="common_register">등록</string>
+    <string name="common_agree">동의</string>    
+    <string name="common_complete">완료</string>                   
+    <string name="common_percent">퍼센트</string> 
+    <string name="common_select">선택</string>   
+    <string name="common_selected">선택함.</string>
+    <string name="common_deselected">선택해제.</string>
+    <string name="common_noselected">선택안함.</string>         
+    <string name="common_home_btn">홈</string>
+    <string name="common_list_edit">편집</string>
+    <string name="common_list_del">삭제</string>
+    <string name="common_list_update">수정</string>      
+    <string name="common_list_menu">메뉴</string> 
+    <string name="common_update">업데이트</string> 
+    <string name="common_backItem">이전 항목</string> 
+    <string name="common_nextItem">다음 항목</string> 
+    <string name="common_plus">증가</string>
+    <string name="common_minus">감소</string>          
+    <string name="common_open">열기</string>          
+    <string name="common_folder">폴더</string>           
+    <string name="common_button">버튼</string>     
+    <string name="common_exit">종료</string>
+    <string name="common_edit_cancel">편집취소</string>    
+    <string name="common_search">검색</string> 
+    <string name="common_heading">머릿말</string>
+                    
+    <!-- 플레이어 관련 -->
+    <string name="player_start">재생</string>
+    <string name="player_stop">일시정지</string>
+    <string name="player_exit">플레이어 종료</string>    
+    <string name="player_move_size">이동 단위 선택</string>
+    <string name="player_move_size_desc">버튼을 누르면 변경 가능합니다.</string>    
+    <string name="player_move_size_sel">%1$s이동 선택</string>
+    <string name="player_move_pos">이동 위치</string>
+    <string name="player_parsing_error">파일이 정상적으로 열리지 않았습니다.</string>
+    <string name="player_firstmark">첫 북마크입니다.</string>
+    <string name="player_lastmark">마지막 북마크입니다.</string>
+    <string name="player_firstmemo">첫 메모입니다.</string>
+    <string name="player_lastmemo">마지막 메모입니다.</string>    
+        
+    <string name="player_word_first">페이지 처음입니다. 이전페이지로 넘어갑니다.</string>
+    <string name="player_word_last">페이지 마지막입니다.다음페이지로 넘어갑니다.</string>
+    <string name="player_page_first">첫 페이지 입니다.</string>
+    <string name="player_page_last">마지막 페이지 입니다.</string>
+    <string name="player_search_fail">검색결과가 더 이상 없습니다.</string>    
+    <string name="player_timer_set">타이머 설정</string>
+    <string name="player_timer_on">분 뒤에 타이머가 설정되었습니다.</string>
+    <string name="player_timer_off">타이머가 정지되었습니다.</string>
+    
+    <string name="player_alpha">글자</string>
+    <string name="player_alpha_en">alpha</string>
+    <string name="player_word">단어</string>
+    <string name="player_word_en">word</string>
+    <string name="player_line">줄</string>
+    <string name="player_line_en">line</string>
+    <string name="player_page">페이지</string>        
+    <string name="player_page_en">page</string>
+    <string name="player_mark">마크</string>  
+    <string name="player_mark_en">mark</string>
+    <string name="player_memo">메모</string> 
+    <string name="player_memo_en">memo</string>  
+    
+    <string name="player_btn_allselect">전체선택</string> 
+    <string name="player_btn_allfree">전체해제</string>               
+    <string name="player_btn_edit">편집</string>     
+    <string name="player_btn_delete">삭제</string>           
+    <string name="player_btn_addmark">마크지정</string>   
+    <string name="player_btn_menu">메뉴</string> 
+
+    <string name="player_menu_move">이동단위 선택</string>      
+    <string name="player_menu_search">단어 검색</string>     
+    <string name="player_menu_bookmark">마크지정</string>     
+    <string name="player_menu_memo">메모삽입</string>      
+    <string name="player_menu_marklist">마크 목록</string>    
+    <string name="player_menu_memolist">메모 목록</string>    
+    <string name="player_menu_movepage">페이지 이동</string>     
+    <string name="player_menu_movepercent">퍼센트 이동</string>           
+    <string name="player_menu_sleep">취침예약</string>  
+    <string name="player_menu_setting">플레이어 설정</string>    
+    <string name="player_menu_encoding">텍스트 인코딩</string>          
+    <string name="player_menu_markcomment">마크 이름을 입력하세요</string>
+    <string name="player_menu_memocomment">메모 내용을 입력하세요</string>    
+    <string name="player_menu_searchcomment">검색할 단어를 입력하세요</string>    
+    
+    <!-- 페이지,퍼센트 -->
+    <string name="list_count_format">총 %1$d 페이지 중 %2$s 페이지, %3$d 퍼센트</string>
+    <string name="list_count_format_percent">퍼센트 이동. 현재 %1$d 퍼센트</string>
+    <string name="popup_count_format">페이지 현황. 총 %1$d 페이지 중 %2$s 페이지 </string>
+    <string name="popup_count_format_percent">퍼센트 현황. 현재 %1$d 퍼센트</string>
+    <string name="chapter_count_format">목차 이동. 총 %1$d 개 파일 중 %2$d 번째 파일 </string>
+    <string name="count_format_per">%</string>  
+    <string name="count_format_file">%1$d 번째 파일 :</string>       
+    <string name="list_count_format_per_no_parenthesis">%1$s / %2$d , %3$d 퍼센트</string>
+    <string name="list_count_format_no_parenthesis">%1$s / %2$d</string>
+    <string name="automode_count_format">%1$s 페이지 재생 중, %2$s</string>    
+
+    <string name="player_td_start">%1$s페이지  %2$d줄 에서 시작합니다</string>    
+    <string name="player_text_start">%1$d줄에서 시작합니다</string>    
+    <string name="player_first_start">처음부터 시작합니다</string>
+            
+    <string name="player_recent">책갈피</string>       
+    <string name="has_mark_3info">%1$s , %2$s 및 %3$s 정보 있음</string>    
+    <string name="has_mark_2info">%1$s , %2$s 정보 있음</string>    
+    <string name="has_mark_1info">%1$s 정보 있음</string> 
+    
+    <!-- 팝업 -->
+    <string name="no_label"></string>  
+    <string name="popup_create_folder">폴더 만들기</string>        
+    <string name="popup_no_label">입력된 내용이 없습니다.</string>    
+    <string name="popup_pagenum_imp">이동가능한 페이지를 벗어났습니다. 1부터 %1$d사이의 페이지 번호를 입력해 주십시오.</string>    
+    <string name="popup_setSleep">수면 타이머를 설정하세요.</string>
+    <string name="popup_bookmark_yn">해당 지점에 북마크 하시겠습니까?</string>
+    <string name="popup_confirmMemo">현재 위치에 메모가 지정되었습니다.</string>
+    <string name="popup_viewMemo">현재 페이지의 메모입니다.</string>
+    <string name="popup_bookmark_fail">북마크 지정에 실패했습니다.</string>    
+    <string name="popup_bookmemo_fail">메모 추가에 실패했습니다.</string>        
+    <string name="popup_setMemo">현재 지점에 삽입할 메모를 \n 입력하세요.</string>
+    <string name="popup_insertMemo">메모 내용은 반드시 입력해야합니다.</string>  
+    <string name="popup_quick_page">이동할 페이지를 입력하세요.</string>
+    <string name="popup_quick_percent">이동할 퍼센트를 입력하세요.</string>    
+    <string name="popup_ex_pageno_zero">페이지 번호를 입력해 주십시오.</string>
+    <string name="popup_ex_pageno_int">페이지 번호는 정수 숫자만 입력해 주십시오.</string>    
+    <string name="popup_ex_pageno_up">총 페이지 값 보다 큽니다.\n재 입력해 주세요.</string>
+    <string name="popup_ex_percent_up">퍼센트는 0부터 100까지의 정수만 입력 가능합니다.</string>        
+    <string name="popup_markok">마크지정 확인</string>
+    <string name="popup_markcancel">마크지정 취소</string>   
+    <string name="popup_searchok">단어검색 확인</string>
+    <string name="popup_searchcancel">마크지정 취소</string>      
+    <string name="popup_search_null">검색어를 입력해 주십시오.</string>
+    <string name="popup_search_noword">검색 이동은 검색한 단어가 있을때만 가능합니다.</string>
+            
+    <!-- toast -->
+    <string name="toast_back_end">종료하시려면 한번 더 눌러주세요</string>
+    <string name="toast_chk_none">선택된 항목이 없습니다.</string>
+    <string name="toast_allchk_ok">모든 항목이 선택되었습니다.</string>
+    <string name="toast_allchk_cancel">모든 항목이 선택해제되었습니다.</string>
+    <string name="toast_focus_first">처음 항목입니다.</string>
+    <string name="toast_focus_last">마지막 항목입니다.</string>
+    <string name="toast_network_error"></string>    
+    <string name="home_search_input">검색어</string>
+    <string name="home_search_input_cancel">텍스트 지우기</string>    
+    <string name="setting_increase">설정값이 %1$d 으로 증가했습니다.</string>
+    <string name="setting_decrease">설정값이 %1$d 으로 감소했습니다.</string>
+    <string name="setting_inmax">설정값이 최대값입니다.</string>
+    <string name="setting_demax">설정값이 최소값입니다.</string>
+    <string name="setting_voicespeedSet">음성속도 %1$d</string>
+       
+    <!-- 다이얼로그 -->
+    <string name="dialog_book_mark">현재 위치에 북마크 하였습니다.</string>
+    <string name="dialog_player_end_book">텍스트 파일을 모두 읽었습니다.\n 종료하시겠습니까?</string>    
+    <string name="dialog_select_del_select">선택하신 </string>    
+    <string name="dialog_select_del">항목을 삭제하시겠습니까?</string>    
+    <string name="dialog_del_ok">삭제가 완료되었습니다.</string>
+  	<string name="dialog_editbtn_true">편집 모드로 전환되었습니다.</string>
+  	<string name="dialog_editbtn_false">편집 모드가 비활성화 되었습니다.</string>  		    
+    <string name="dialog_delete_list">%1$d 건을 정말 삭제하시겠습니까?</string>    
+    <string name="dialog_no_text_bookmark">이 파일에 북마크가 없습니다.</string>
+    <string name="dialog_no_text_memo">이 파일에 메모가 없습니다.</string> 
+    <string name="dialog_endapp">플레이어를 종료 하시겠습니까?</string>
+     
+    <!-- 어플리케이션 설정 : 01 음성설정 -->
+    <string name="setting_voice_kr">음성 출력-음성 출력의 속도, 높이, 볼륨을 설정합니다.</string>     
+    <string name="setting_read_kr">읽기 방법 - 각 문자 형식의 읽기 여부를 설정합니다.</string>     
+    <string name="setting_etc_kr">기타 설정 - 기타 설정을 정의합니다.</string>
+    <string name="setting_voice_desc">음성 출력-음성 출력의 속도, 높이, 볼륨을 설정합니다. 머릿말</string>     
+    <string name="setting_read_desc">읽기 방법 - 각 문자 형식의 읽기 여부를 설정합니다. 머릿말</string>     
+    <string name="setting_etc_desc">기타 설정 - 기타 설정을 정의합니다. 머릿말</string>
+
+    <string name="voice_speed">음성 속도</string>   
+    <string name="voice_tone">음성 높이</string>   
+    <string name="voice_volume">음성 크기</string>       
+    <string name="read_korean">한글 읽기</string>
+    <string name="read_english">영어 읽기</string>
+    <string name="read_number">숫자 읽기</string>
+    <string name="read_punct">구두점 읽기</string>
+    <string name="read_special">특수문자 읽기</string>
+    <string name="read_chletter">한자 읽기</string>
+    <string name="etc_repeat">반복 문자 처리</string>
+    <string name="etc_repeatcount">반복 문자 출력개수</string> 
+    
+    <!-- 어플리케이션 설정 : 03 화면설정 --> 
+    <string name="setting_text_size_kr">글자 크기</string>
+	<string name="setting_text_size_title">글자 크기 - 자료의 글자크기를 변경합니다.</string>        
+	<string name="setting_text_size_desc">글자 크기 - 자료의 글자크기를 변경합니다. 머릿말</string>    	
+    <string name="setting_voice_speed_kr">음성 속도</string>
+    <string name="setting_voice_tone_kr">음성 높이</string>
+    <string name="setting_voice_volume_kr">음성 크기</string>
+    	
+    <!-- 고대비 설정  -->
+    <string name="set_contrast_kr">고대비 모드</string>        
+    <string name="set_contrast_desc">고대비 모드. 머릿말</string> 
+    <string name="set_contrast0">고대비 끔</string>
+    <string name="set_contrast1">검정바탕에 흰글씨</string>
+    <string name="set_contrast2">흰바탕에 검정글씨</string>
+    <string name="set_contrast3">검정바탕에 노란글씨</string>
+    <string name="set_contrast4">파란바탕에 노란글씨</string>
+    
+    <string name="setting_menu_00">설정</string>
+    <string name="setting_menu_02">플레이어 TTS음성 설정</string>
+    <string name="setting_menu_03">플레이어 기능 설정</string>
+    <string name="setting_menu_04">플레이어 화면 설정</string> 
+    
+    <string name="title_player">플레이어 화면</string>  
+    <string name="title_menu">메뉴</string>
+    <string name="title_playermenu">플레이어 메뉴</string>    
+    <string name="title_textsearch">본문검색</string>    
+    <string name="title_search">상세검색</string>
+    <string name="title_result">검색결과 (%1$d건)</string>
+    <string name="title_resultview">검색결과</string>     
+    <string name="title_ctrlview">제어창</string>         
+    <string name="title_bookview">본문</string> 
+    <string name="title_marklist">마크 목록</string>    
+    <string name="title_memolist">메모 목록</string>
+    <string name="title_bookmark">마크지정</string>     
+    <string name="title_memo">메모삽입</string>                
+    <string name="title_pagemove">페이지 이동</string>
+    <string name="title_permove">퍼센트 이동</string> 
+        
+    <string name="str_folder">폴더</string>
+    <string name="move_upperfolder">상위폴더로</string>        
+    <string name="dialog_loading">잠깐만 기다려 주십시요</string>
+</resources>

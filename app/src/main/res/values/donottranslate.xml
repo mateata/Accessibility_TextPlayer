@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting_voice_speed">setting_voice_speed</string>
+    <string name="setting_voice_tone">setting_voice_tone</string>
+    <string name="setting_voice_volume">setting_voice_volume</string>
+    <string name="setting_read_korean">setting_read_korean</string>
+    <string name="setting_read_english">setting_read_english</string>
+    <string name="setting_read_number">setting_read_number</string>
+    <string name="setting_read_punct">setting_read_punct</string>
+    <string name="setting_read_special">setting_read_special</string>
+    <string name="setting_read_chletter">setting_read_chletter</string>
+    <string name="setting_repeat">setting_repeat</string>
+    <string name="setting_repeat_count">setting_repeat_count</string>    
+    <string name="setting_sleep">setting_sleep</string>
+
+    <!-- 어플리케이션 설정 : 02 기능설정 -->
+    <string name="setting_startAuto">setting_startAuto</string>
+    <string name="setting_startBookmark">setting_startBookmark</string>
+    <string name="setting_useParagraph">setting_useParagraph</string>
+    <string name="setting_usePage">setting_usePage</string>
+    <string name="setting_useContentTable">setting_useContentTable</string>
+    <string name="setting_useElement">setting_useElement</string>
+    <string name="setting_useLink">setting_useLink</string>
+    <string name="setting_useImage">setting_useImage</string>
+    <string name="setting_useComment">setting_useComment</string>
+    <string name="setting_useMark">setting_useMark</string>
+    <string name="setting_useMemo">setting_useMemo</string>
+    <string name="setting_useSearchWord">setting_useSearchWord</string>
+    <string name="setting_useCharacter">setting_useCharacter</string>
+    <string name="setting_useWord">setting_useWord</string>   
+    <string name="setting_useLine">setting_useLine</string> 
+    
+    <string name="setting_color_set">setting_color_set</string>    
+    <string name="setting_text_color">setting_text_color</string>
+    <string name="setting_bg_color">setting_bg_color</string>
+    <string name="setting_hightext_color">setting_hightext_color</string>
+    <string name="setting_highbg_color">setting_highbg_color</string>    
+    <string name="setting_text_size">setting_text_size</string>    
+        
+</resources>

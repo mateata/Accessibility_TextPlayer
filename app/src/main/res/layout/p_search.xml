@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="270dp"
+    android:layout_height="wrap_content"
+	android:background="#ffffff"
+    >
+    <!-- 변경 -->
+    <RelativeLayout
+        android:id="@+id/popup_search_layout_contentsset"
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"       
+        android:layout_marginTop="20dp"
+        >
+	    <RelativeLayout
+	        android:id="@+id/popup_search_layout_edit"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        >
+	        <TextView 
+	            android:id="@+id/popup_search_title"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+            	android:contentDescription="@string/player_btn_addmark"	            
+	            android:text="@string/player_menu_search"
+	            android:textSize="18dp"
+	            android:textColor="@color/color_txt_black"
+	            android:gravity="center"
+	            />
+	        <TextView 
+	            android:id="@+id/popup_search_ment"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"	            
+	            android:gravity="center|center_vertical"
+            	android:contentDescription="@string/player_menu_searchcomment"	            
+	            android:text="@string/player_menu_searchcomment"
+				android:layout_below="@id/popup_search_title" 	            
+	            android:textColor="@color/color_txt_gray"
+	            android:textSize="16dp"
+	            />	          
+			<EditText
+			    android:id="@+id/popup_search_edit_sn"
+			    android:layout_width="230dp"
+			    android:layout_height="35dp"
+			    android:layout_centerHorizontal="true"
+			    android:layout_below="@+id/popup_search_ment"			    
+			    android:background="@drawable/btn_link_w"
+			    android:contentDescription="@string/player_menu_searchcomment"
+			    android:ems="10"
+			    android:focusable="true"
+			    android:gravity="center|center_vertical"
+			    android:imeOptions="actionDone"
+			    android:paddingLeft="5dp"
+			    android:privateImeOptions="defaultInputmode=korean"
+			    android:singleLine="true"
+			    android:textSize="16sp" >
+
+			    <requestFocus />
+			</EditText>
+
+                  		    	       
+	    </RelativeLayout>
+		<RelativeLayout
+	        android:id="@+id/popup_search_layout_btnset"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/popup_search_layout_edit"
+	        android:layout_marginTop="10dp"
+	        android:layout_centerHorizontal="true"
+	        >
+			<Button
+				android:id="@+id/popup_search_btn_cancel"
+		        android:layout_width="95dp"
+		        android:layout_height="50dp"
+		        android:gravity="center_vertical|center_horizontal"
+		        android:background="@drawable/btn_link_g_se"
+            	android:contentDescription="@string/popup_searchcancel"				        
+		        android:text="@string/common_cancel"
+		        android:textSize="16dp"
+		        />
+			<Button
+				android:id="@+id/popup_search_btn_ok"
+		        android:layout_width="95dp"
+		        android:layout_height="50dp"
+		        android:background="@drawable/btn_link_g_se"
+		        android:layout_marginLeft="10dp"
+            	android:contentDescription="@string/popup_searchok"		        
+		        android:text="@string/common_ok"
+		        android:textSize= "16dp"		        
+		        android:layout_toRightOf="@id/popup_search_btn_cancel"
+		        />
+
+		</RelativeLayout>
+	</RelativeLayout>
+	<RelativeLayout
+        android:id="@+id/popup_search_layout_buttomgap"
+        android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_below="@id/popup_search_layout_contentsset"
+        >
+	</RelativeLayout>
+</RelativeLayout>

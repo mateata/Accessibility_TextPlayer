@@ -1,0 +1,355 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jwlee.dream.Activities.HomeActivity" >
+
+     <include
+         android:id="@+id/h_menu_title"
+            layout="@layout/h_back_title" /> 
+            
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_below="@+id/h_menu_title"         
+        android:layout_alignParentLeft="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#ddd"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/setting_voice_kr"
+                android:contentDescription="@string/setting_voice_desc"                
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/voice_speed" />
+
+                <Button
+                    android:id="@+id/bt_speed_dec"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_speed"
+                    android:contentDescription="@string/common_minus"                    
+                    android:background="@drawable/icon_min" />
+
+                <TextView
+                    android:id="@+id/tv_speed"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/bt_speed_inc"
+                    android:gravity="center"
+                    android:text="50" />
+
+                <Button
+                    android:id="@+id/bt_speed_inc"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/common_plus"                    
+                    android:background="@drawable/icon_plu" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/voice_tone" />
+
+                <Button
+                    android:id="@+id/bt_tone_dec"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_tone"
+                    android:contentDescription="@string/common_minus"                    
+                    android:background="@drawable/icon_min" />
+
+                <TextView
+                    android:id="@+id/tv_tone"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/bt_tone_inc"
+                    android:gravity="center"
+                    android:text="50" />
+
+                <Button
+                    android:id="@+id/bt_tone_inc"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/common_plus"                    
+                    android:background="@drawable/icon_plu" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/voice_volume" />
+
+                <Button
+                    android:id="@+id/bt_vol_dec"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_vol"
+                    android:contentDescription="@string/common_minus"
+                    android:background="@drawable/icon_min" />
+
+                <TextView
+                    android:id="@+id/tv_vol"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/bt_vol_inc"
+                    android:gravity="center"
+                    android:text="50" />
+
+                <Button
+                    android:id="@+id/bt_vol_inc"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/common_plus"                    
+                    android:background="@drawable/icon_plu" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#ddd"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/setting_read_kr"
+                android:contentDescription="@string/setting_read_desc"                
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/read_korean" />
+
+                <CheckBox
+                    android:id="@+id/cb_readkorean"
+                    style="@style/CheckBox"
+                    android:layout_width="56dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/read_english" />
+
+                <CheckBox
+                    android:id="@+id/cb_readenglish"
+                    style="@style/CheckBox"
+                    android:layout_width="56dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/read_number" />
+
+                <CheckBox
+                    android:id="@+id/cb_readnumber"
+                    style="@style/CheckBox"
+                    android:layout_width="56dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/read_punct" />
+
+                <CheckBox
+                    android:id="@+id/cb_readpunc"
+                    style="@style/CheckBox"
+                    android:layout_width="56dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/read_special" />
+
+                <CheckBox
+                    android:id="@+id/cb_readschar"
+                    style="@style/CheckBox"
+                    android:layout_width="56dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/read_chletter" />
+
+                <CheckBox
+                    android:id="@+id/cb_readchlt"
+                    style="@style/CheckBox"
+                    android:layout_width="56dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#ddd"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/setting_etc_kr"
+                android:contentDescription="@string/setting_etc_desc"
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/etc_repeat" />
+
+                <CheckBox
+                    android:id="@+id/cb_repeat"
+                    style="@style/CheckBox"
+                    android:layout_width="56dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/img_dot_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp" >
+
+                <TextView
+                    style="@style/SettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:text="@string/etc_repeatcount" />
+
+                <EditText
+                    android:id="@+id/cb_repeatcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="3"
+                    android:inputType="number" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    
+    
+    <!-- 플레이어 기능설정 -->
+    <string-array name="setfunction">
+        
+        <item>none:뷰어 설정-문서 뷰어의 동작 방식을 설정합니다.</item>
+        <item>func00:자료 열기 시 자동 재생</item>
+        <item>func00:책갈피 위치로 열기</item>
+        <item>none:단계 설정-단계별 사용 유무를 설정합니다.</item>
+        <item>func00:페이지</item>
+        <item>func01:마크</item>
+        <item>func02:메모</item>
+        <item>func03:검색어</item>
+        <item>func04:글자</item>
+        <item>func15:단어</item>
+        <item>func16:줄</item>
+    </string-array>
+
+    <string-array name="output_list_values" translatable="false">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item> 
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>   
+        <item>50</item>  
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item> 
+        <item>75</item>
+        <item>80</item>
+        <item>85</item>
+        <item>90</item>
+        <item>95</item>   
+        <item>100</item>                          
+    </string-array>    
+ 
+    <string-array name="mathpunctitem">
+        <item>%</item>
+        <item>(</item>
+        <item>)</item>
+        <item>*</item>
+        <item>+</item>
+        <item>-</item>
+        <item><![CDATA["/"]]></item>
+        <item><![CDATA["<"]]></item>
+        <item>=</item>
+        <item><![CDATA[">"]]></item>
+        <item><![CDATA["^"]]></item>
+    </string-array>
+
+    <string-array name="mathpunctname">
+        <item>퍼센트</item>
+        <item>괄호열고</item>
+        <item>괄호닫고</item>        
+        <item>스타</item>
+        <item>플러스</item>
+        <item>대쉬</item>
+        <item>슬레쉬</item>
+        <item>레스댄</item>
+        <item>이콜</item>
+        <item>그레이터댄</item>
+        <item>캐럿</item>
+    </string-array>
+    
+    <string-array name="wordpunctitem">
+        <item>!</item>
+        <item><![CDATA["\""]]></item>
+        <item><![CDATA["'"]]></item>
+        <item>,</item>
+        <item>.</item>
+        <item>:</item>
+        <item>;</item>
+        <item><![CDATA["?"]]></item>
+    </string-array>
+
+    <string-array name="wordpunctname">
+        <item>느낌표</item>
+        <item>쿼테이션</item>
+        <item>어퍼스트로피</item>
+        <item>콤마</item>
+        <item>쩜</item>
+        <item>콜론</item>
+        <item>세미콜론</item>
+        <item>물음표</item>
+    </string-array>
+
+    <string-array name="etcpunctitem">
+        <item>#</item>
+        <item>$</item>
+        <item><![CDATA["&"]]></item>
+        <item><![CDATA["@"]]></item>
+        <item>[</item>
+        <item><![CDATA["\\"]]></item>
+        <item>]</item>
+        <item>_</item>
+        <item><![CDATA["`"]]></item>
+        <item>{</item>
+        <item>|</item>
+        <item>}</item>
+        <item>~</item>
+        <item><![CDATA["‘"]]></item>
+        <item><![CDATA["’"]]></item>
+        <item><![CDATA["“"]]></item>
+        <item><![CDATA["”"]]></item>
+        <item><![CDATA["→"]]></item>
+        <item><![CDATA["←"]]></item>        
+    </string-array>    
+   
+    <string-array name="etcpunctname">
+        <item>샵</item>
+        <item>딸러</item>
+        <item>앤드</item>
+        <item>골벵이</item>
+        <item>대괄호열고</item>
+        <item>백슬래쉬</item>
+        <item>대괄호닫고</item>
+        <item>언더바</item>
+        <item>그레이브</item>
+        <item>중괄호열고</item>
+        <item>버티클바</item>
+        <item>중괄호닫고</item>
+        <item>물결</item>
+        <item>작은따옴표 열고</item>
+        <item>작은따옴표 닫고</item>
+        <item>큰따옴표 열고</item>
+        <item>큰따옴표 닫고</item>
+        <item>오른쪽 화살표</item>
+        <item>왼쪽 화살표</item>        
+    </string-array>    
+    
+</resources>

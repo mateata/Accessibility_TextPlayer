@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+    <RelativeLayout
+        android:id="@+id/h_HomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" >
+    
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="230dp"
+            android:layout_height="41dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/searchBtn2"
+            android:background="@drawable/btn_link_w"
+            android:contentDescription="@string/home_search_input"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"       
+            android:singleLine="true"
+            android:textSize="16sp" >
+        </EditText>
+        <Button
+            android:id="@+id/searchBtn2"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_sh"
+            android:contentDescription="@string/player_menu_search"
+            android:textColor="@color/color_header_txt" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/img_shd_l" />        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/h_HomeLayout"
+        android:visibility="visible" >
+        <ListView
+            android:id="@+id/lv_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_search_result"
+            android:layout_marginBottom="5dp"
+            android:divider="@drawable/img_dot_line"
+            android:layout_marginTop="6dp"
+            android:focusable="true" >
+        </ListView>
+            <TextView
+                android:id="@+id/textNoList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/player_search_fail"
+                android:gravity="center"
+                android:text="@string/player_search_fail"
+                android:textSize="16sp"
+                android:visibility="gone" >
+            </TextView>
+        <RelativeLayout
+            android:id="@+id/layout_block"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9999"
+            android:visibility="gone" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
