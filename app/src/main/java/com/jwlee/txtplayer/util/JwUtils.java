@@ -1,30 +1,30 @@
 package com.jwlee.txtplayer.util;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-
-import com.jwlee.txtplayer.R;
-import com.jwlee.txtplayer.AppControl;
-
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.util.Log;
+import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.accessibility.AccessibilityEvent;
+import android.view.accessibility.AccessibilityManager;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Handler;
-import android.view.*;
-import android.view.accessibility.*;
+
+import com.jwlee.txtplayer.AppControl;
+import com.jwlee.txtplayer.R;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class JwUtils {
 	      
@@ -403,7 +403,8 @@ public class JwUtils {
                   
         return result ;
     }
-    
+
+
 }
 
 

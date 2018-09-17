@@ -14,7 +14,6 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -37,6 +36,8 @@ import com.jwlee.txtplayer.util.JwUtils;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
 
@@ -82,6 +83,18 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 		FontClass.setDefaultFont(this, "SERIF", "nanum.ttf");
 		load_settings();
 
+		HashSet<String> path = AppControl.getExternalMounts();
+		ArrayList<String> pathStr = new ArrayList<String>();
+		if(AppControl.isExternalStorageReadable() && path.size() > 0) {
+			Iterator iter = path.iterator();
+			while (iter.hasNext()) {
+				pathStr.add(iter.next().toString());
+			}
+			Dlog.e("PATH : " + pathStr.get(0));
+			AppControl.SD_MAINPATH = pathStr.get(0);
+		}
+
+
 		Intent intent = getIntent();
 
 		if (intent != null && Intent.ACTION_VIEW.equals(intent.getAction())) {
@@ -98,7 +111,7 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 		} else {
 			// 직접 실행됐을 경우
 			AppControl.DIRECT_CONNECT = false;
-			folderOpen(AppControl.MAIN_PATH);
+			folderOpen(AppControl.SD_MAINPATH);
 		}
 	}
 
@@ -259,19 +272,13 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 		fileList.clear();
 		// 폴더, 파일 리스팅 
 
-		JwUtils.toastCustom(mContext,folderName+"/"+isExternalStorageReadable());
-
-		Dlog.e(Environment.getExternalStorageDirectory().toString());
-
-
-
 		// 폴더 이동 설정 
 		if("".equals(folderName)){
 			// 상위 폴더로 이동 (경로에서 최하단 폴더 삭제)
 			folderPath.remove(folderPath.size()-1);
 
-		}else if(folderPath.size()==1 
-				|| (folderPath.size()>1 && AppControl.MAIN_PATH.equals(folderName))==false){
+		}else if(folderPath.size()==1
+				|| (folderPath.size()>1 && AppControl.SD_MAINPATH.equals(folderName))==false){
 			// 하위폴더 중 folderName로 이동 
 			folderPath.add(folderName);
 		}
@@ -309,15 +316,6 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 		
 		fileOpenAdapter.notifyDataSetChanged();
 				
-		return false;
-	}
-
-	public boolean isExternalStorageReadable() {
-		String state = Environment.getExternalStorageState();
-		if (Environment.MEDIA_MOUNTED.equals(state) ||
-				Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-			return true;
-		}
 		return false;
 	}
 
