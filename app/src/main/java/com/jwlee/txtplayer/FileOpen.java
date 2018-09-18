@@ -15,6 +15,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -54,7 +55,7 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 	
 	private Vector<String> folderPath = new Vector<String>();
 	public static Typeface mTypeface = null;
-	private boolean sdCardYn = false;
+	private boolean sdCardYn = true;
 	
 	private SharedPreferences pref;
 
@@ -134,8 +135,9 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
             while (iter.hasNext()) {
                 pathStr.add(iter.next().toString());
             }
-            Dlog.e("PATH : " + pathStr.get(0));
             AppControl.SD_MAINPATH = pathStr.get(0);
+            AppControl.INTER_MAINPATH = Environment.getExternalStorageDirectory().getPath();
+            Dlog.e("PATH : " + pathStr.get(0) + "$$: " + AppControl.INTER_MAINPATH);
         }
 
 
@@ -261,8 +263,19 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 		 }
 	}
 
-	private void changeSDPath() {
 
+	// SD카드 - 내장메모리 메인으로 경로를 변경한다
+	private void changeSDPath() {
+        folderPath.removeAllElements(); // 최상위 폴더를 바꾸는 것이기 때문에 folderPath 를 초기화
+        if(sdCardYn) {
+	        folderOpen(AppControl.INTER_MAINPATH+"/");
+	        sdCardYn = false;
+            binding.btPath.setText(R.string.path_sdcard);
+        } else {
+            folderOpen(AppControl.SD_MAINPATH);
+            sdCardYn = true;
+            binding.btPath.setText(R.string.path_memory);
+        }
     }
 
 	
@@ -273,6 +286,7 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 	}
 
 	private boolean folderOpen(String folderName){
+	    Dlog.e("PATH : " + folderName);
 		fileList.clear();
 		// 폴더, 파일 리스팅 
 
@@ -282,8 +296,8 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 			folderPath.remove(folderPath.size()-1);
 
 		}else if(folderPath.size()==1
-				|| (folderPath.size()>1 && AppControl.SD_MAINPATH.equals(folderName))==false){
-			// 하위폴더 중 folderName로 이동 
+				|| (folderPath.size()>1 && (AppControl.SD_MAINPATH.equals(folderName) || AppControl.INTER_MAINPATH.equals(folderName)))==false) {
+			// 하위폴더 중 folderName로 이동
 			folderPath.add(folderName);
 		}
 		

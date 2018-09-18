@@ -25,7 +25,7 @@ public class AppControl {
 	public static final int TXT_DIVIDE	= 20; // 텍스트 파일의 한 페이지를 몇 줄로 규정하는가.
 		
 	public static String INTER_MAINPATH = Environment.getExternalStorageDirectory().getAbsolutePath();
-	public static String SD_MAINPATH = "//mnt/media_rw/3036-6436";
+	public static String SD_MAINPATH = "/storage/3036-6436";
 	
 	public static boolean FIRST_RUN = true;
 	public static boolean DEL_FILE  = false;
