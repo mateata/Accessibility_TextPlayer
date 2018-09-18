@@ -23,4 +23,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     implementation 'gun0912.ted:tedpermission:2.2.2'
+    implementation 'com.wealthfront:magellan:1.1.0'
+    implementation 'com.wealthfront:magellan-support:1.1.0'
+
 }

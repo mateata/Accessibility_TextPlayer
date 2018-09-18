@@ -54,7 +54,12 @@
     <string name="common_edit_cancel">편집취소</string>    
     <string name="common_search">검색</string> 
     <string name="common_heading">머릿말</string>
-                    
+
+    <!-- 파일 관련 -->
+    <string name="path_sdcard">SD카드</string>
+    <string name="path_memory">내장메모리</string>
+
+
     <!-- 플레이어 관련 -->
     <string name="player_start">재생</string>
     <string name="player_stop">일시정지</string>
