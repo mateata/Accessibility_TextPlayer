@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -25,6 +26,7 @@ import android.widget.TextView;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 import com.jwlee.txtplayer.adapter.FileOpenAdapter;
+import com.jwlee.txtplayer.databinding.AFileOpenBinding;
 import com.jwlee.txtplayer.setting.PlayerSetting;
 import com.jwlee.txtplayer.setting.ScreenSetting;
 import com.jwlee.txtplayer.setting.SpeechSetting;
@@ -46,9 +48,7 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 	public static Context mContext;
 
 	private ListView mList;
-	private TextView tv_header;
-	private Button backBtn;
-	
+
 	private FileOpenAdapter fileOpenAdapter;
 	private ArrayList<JwFile> fileList = null; 
 	
@@ -57,12 +57,15 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 	private boolean sdCardYn = false;
 	
 	private SharedPreferences pref;
+
+	private AFileOpenBinding binding;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.a_file_open);
-		
+		binding = DataBindingUtil.setContentView(this,R.layout.a_file_open);
+		binding.setFileOpen(this);
+
 		mContext = this;
 		AppControl.DEBUG = isDebuggable(mContext);
 
@@ -75,44 +78,6 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 		//본격 시작전 권한 체크
 		isPermission();
 
-
-	}
-
-	private void initApp() {
-		init_layout();
-		FontClass.setDefaultFont(this, "SERIF", "nanum.ttf");
-		load_settings();
-
-		HashSet<String> path = AppControl.getExternalMounts();
-		ArrayList<String> pathStr = new ArrayList<String>();
-		if(AppControl.isExternalStorageReadable() && path.size() > 0) {
-			Iterator iter = path.iterator();
-			while (iter.hasNext()) {
-				pathStr.add(iter.next().toString());
-			}
-			Dlog.e("PATH : " + pathStr.get(0));
-			AppControl.SD_MAINPATH = pathStr.get(0);
-		}
-
-
-		Intent intent = getIntent();
-
-		if (intent != null && Intent.ACTION_VIEW.equals(intent.getAction())) {
-			// 연결 프로그램으로 실행됐을 경우
-			AppControl.DIRECT_CONNECT = true;
-			String filePath = intent.getData().getPath();
-			File txtFile = new File(filePath);
-			startActivity(new Intent(mContext, TDPlayer.class)
-					.putExtra("ID", filePath)
-					.putExtra("TITLE", txtFile.getName())
-					.putExtra("FILE", filePath)
-					.putExtra("ZIPYN", false)
-					.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-		} else {
-			// 직접 실행됐을 경우
-			AppControl.DIRECT_CONNECT = false;
-			folderOpen(AppControl.SD_MAINPATH);
-		}
 	}
 
 	private void isPermission() {
@@ -157,16 +122,48 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 		return debuggable;
 	}
 
+    private void initApp() {
+        init_layout();
+        FontClass.setDefaultFont(this, "SERIF", "nanum.ttf");
+        load_settings();
 
-	private void init_layout() {		
-		
+        HashSet<String> path = AppControl.getExternalMounts();
+        ArrayList<String> pathStr = new ArrayList<String>();
+        if(AppControl.isExternalStorageReadable() && path.size() > 0) {
+            Iterator iter = path.iterator();
+            while (iter.hasNext()) {
+                pathStr.add(iter.next().toString());
+            }
+            Dlog.e("PATH : " + pathStr.get(0));
+            AppControl.SD_MAINPATH = pathStr.get(0);
+        }
+
+
+        Intent intent = getIntent();
+
+        if (intent != null && Intent.ACTION_VIEW.equals(intent.getAction())) {
+            // 연결 프로그램으로 실행됐을 경우
+            AppControl.DIRECT_CONNECT = true;
+            String filePath = intent.getData().getPath();
+            File txtFile = new File(filePath);
+            startActivity(new Intent(mContext, TDPlayer.class)
+                    .putExtra("ID", filePath)
+                    .putExtra("TITLE", txtFile.getName())
+                    .putExtra("FILE", filePath)
+                    .putExtra("ZIPYN", false)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        } else {
+            // 직접 실행됐을 경우
+            AppControl.DIRECT_CONNECT = false;
+            folderOpen(AppControl.SD_MAINPATH);
+        }
+    }
+
+	private void init_layout() {
+	    binding.headerTitle.setText(R.string.app_name);
+	    binding.backBtn.setText(R.string.common_exit);
 		mList = (ListView)findViewById(R.id.listView1);
 		mList.setOnItemClickListener(this);
-		tv_header = (TextView)findViewById(R.id.tv_header_title);
-		tv_header.setText(R.string.app_name);		
-		backBtn = (Button)findViewById(R.id.backBtn);
-		backBtn.setOnClickListener(this);
-		backBtn.setText(R.string.common_exit);
 		
 		fileList = new ArrayList<JwFile>(); 
 		fileOpenAdapter = new FileOpenAdapter(mContext, R.layout.i_set_file, fileList);
@@ -234,11 +231,14 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.backBtn:
-			onBackPressed();
-			break;
-		default:
-			break;
+		    case R.id.backBtn:
+			    onBackPressed();
+			    break;
+            case R.id.bt_path:
+                changeSDPath();
+			    break;
+		    default:
+			    break;
 		}
 	}	
 
@@ -260,6 +260,10 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 			 folderOpen();
 		 }
 	}
+
+	private void changeSDPath() {
+
+    }
 
 	
 	//	// 경로 지정없을 경우  uppser folder FIXME
