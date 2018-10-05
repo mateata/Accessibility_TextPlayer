@@ -238,7 +238,7 @@ public class TDPlayer extends TDBaseActivity implements OnInitListener, OnClickL
         }
     };
  
-	@SuppressWarnings("deprecation")
+	@SuppressLint("InvalidWakeLockTag")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -630,7 +630,7 @@ public class TDPlayer extends TDBaseActivity implements OnInitListener, OnClickL
 			if(mTTSNo == 0) {
 				mTTSNo = 1;
 			}
-			JwUtils.readingVoice(mContext, mTitle +""+getString(R.string.player_td_start, mPageNo, mTTSNo));
+			JwUtils.readingVoice(mContext, mTitle +""+getString(R.string.player_td_start, mPageNo+"", mTTSNo));
 		}
         pageText(false); 
 	}
@@ -1686,21 +1686,21 @@ public class TDPlayer extends TDBaseActivity implements OnInitListener, OnClickL
 		memocursor.close();
 	}	
 	public void chapterBack(){
-		if(mPageNo == 1 && (moveVal.equals(getString(R.string.player_page_en, "")))){
+		if(mPageNo == 1 && (moveVal.equals(getString(R.string.player_page_en)))){
 			JwUtils.readingVoice(mContext, getString(R.string.player_page_first));
 		}
 		if(moveVal.equals("")){
-			moveVal = getString(R.string.player_page_en, "");
+			moveVal = getString(R.string.player_page_en);
 		}           
 		pageController(moveVal+"Back");
 	}
 
 	public void chapterNext(){
-		if(mTotalNo <= mPageNo && (moveVal.equals(getString(R.string.player_page_en, "")))){
+		if(mTotalNo <= mPageNo && (moveVal.equals(getString(R.string.player_page_en)))){
 			JwUtils.readingVoice(mContext, getString(R.string.player_page_last));
 		}
 		if(moveVal.equals("")){
-			moveVal = getString(R.string.player_page_en, "");
+			moveVal = getString(R.string.player_page_en);
 		}
 		pageController(moveVal+"Next");		
 	}
