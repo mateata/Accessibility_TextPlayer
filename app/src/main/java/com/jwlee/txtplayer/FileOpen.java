@@ -72,8 +72,8 @@ public class FileOpen extends Activity implements OnClickListener, OnItemClickLi
 
 
 		if (mTypeface == null) {
-			mTypeface = Typeface.createFromAsset(getAssets(), "nanum.ttf"); // 외부폰트 사용
-//			mTypeface = Typeface.MONOSPACE; // 내장 폰트 사용
+			//mTypeface = Typeface.createFromAsset(getAssets(), "nanum.ttf"); // 외부폰트 사용
+			mTypeface = Typeface.MONOSPACE; // 내장 폰트 사용
 		}
 
 		//본격 시작전 권한 체크
